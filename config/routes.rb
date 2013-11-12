@@ -2,8 +2,10 @@ NewSite::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # High Voltage Redirects. First line, stops duplicate content, second; sets root to home.html.erb in Pages.
+  get '/home', to: redirect('/')
+
+  root :to => 'high_voltage/pages#show', id: 'home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -17,7 +19,7 @@ NewSite::Application.routes.draw do
   # Example resource route with options:
   #   resources :products do
   #     member do
-  #       get 'short'
+  #       get 'short'https://github.com/atlrug-rhok/medlink/issues/134
   #       post 'toggle'
   #     end
   #
