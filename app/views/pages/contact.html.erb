@@ -1,3 +1,12 @@
 <%= content_for :page_title, 'Contact Josh' %>
 
 <h1><%= yield(:page_title) %></h1>
+
+<p>Use the form below to contact me.</p>
+<%= simple_form_for @contact do |f| %>
+  <%= f.input :username, label: 'Your username please' %>
+  <%= f.input :password, hint: 'No special characters.' %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit %>
+<% end %>

@@ -30,6 +30,9 @@ gem 'zurb-foundation', '~> 4.0.0'
 gem 'high_voltage'
 gem 'font-awesome-rails'
 
+# Contact Page
+gem 'simple_form'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
