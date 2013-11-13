@@ -11,20 +11,23 @@
   	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
   	<!-- Set the viewport width to device width for mobile -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JoshAronoff.com | <%= yield(:page_title) %></title>
 
-  	<%= stylesheet_link_tag    "application" %>
+  	<%= stylesheet_link_tag "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+
     <%= render :partial => 'layouts/nav' %>
+    <div class="row">
     <%= yield %>
-      <%= render :partial => 'layouts/footer' %>
-    
+    </div>
+    <div class="row">
+    <%= render :partial => 'layouts/footer' %>
+      </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'compass' # you need this or you get an err
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'high_voltage'
+gem 'font-awesome-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

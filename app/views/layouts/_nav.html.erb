@@ -1,5 +1,6 @@
+<div class="contain-to-grid">
 <nav class="top-bar">
-  	
+
   <ul class="title-area large-3 columns">
       <li class="name"><h1><%= link_to 'Josh Aronoff', page_path('home') %></h1></li>
     <li class="toggle-topbar icon"><a href="#"><span>Menu</span></a></li>
@@ -7,13 +8,10 @@
 
   <section class="top-bar-section">
  	 <ul class="right">
-  	<li><%= link_to 'About Josh', page_path('about') %></li>
-  	<li><%= link_to 'Portfolio', page_path('portfolio') %></li>
-  	<li><%= link_to 'Experience', page_path('experience') %></li>
-  	<li><%= link_to 'Contact', page_path('contact') %></li>
-  </ul>
+ 	 	<%= render :partial => 'layouts/globalnav' %>
+    </ul>
   </section>
-
+ 
 </nav>
-
+</div>
 

@@ -1,18 +1,20 @@
 <footer class="row">
-    <div class="large-12 columns">
-      <hr>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright Josh Aronoff. Word up.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-              <li><%= link_to 'About Josh', page_path('about') %></li>
-              <li><%= link_to 'Portfolio', page_path('portfolio') %></li>
-              <li><%= link_to 'Experience', page_path('experience') %></li>
-              <li><%= link_to 'Contact', page_path('contact') %></li>
-          </ul>
+  <div class="large-12 columns">
+    <hr>
+    <div class="row">
+      <div class="large-4 columns">
+        <p><a href="tel:+14126132500">412-613-2500</a> | <a href="mailto:aronoff@gmail.com">Email me</a></p>
+      </div>
+      <div class="large-8 columns">
+        <ul class="inline-list right">
+          <%= render :partial =>'layouts/globalnav' %></ul>
+        <div class="row">
+          <div class="large-12 columns">
+            <ul class="inline-list right">
+              <%= render :partial =>'layouts/social' %></ul>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
