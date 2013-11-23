@@ -1,0 +1,38 @@
+$text_color: white;
+$link_color: #2ba6cb;
+$font-stack: Helvetica, sans-serif;
+ 
+p{
+  color: $text_color;
+
+}
+a{
+  color: $text_color;
+    &:hover {
+        color:link_color;
+       
+    }
+}
+
+
+
+body {
+	background: #ffffff url('low_contrast_linen.png') repeat fixed center; 
+	font: 100% $font-stack;
+  color: $text_color;
+}
+
+
+
+h4 {
+	font-size:3em;
+	color: $link_color;
+}
+
+top-bar-section {
+
+}
+
+h1 {
+  color: $link_color;
+}
