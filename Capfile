@@ -1,3 +1,7 @@
+#from "http://stackoverflow.com/questions/9370920/capistrano-no-such-file-to-load-deploy"
+load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+
+
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
 
