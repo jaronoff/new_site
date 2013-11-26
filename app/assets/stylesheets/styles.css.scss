@@ -1,7 +1,45 @@
-$text_color: white;
-$link_color: #2ba6cb;
+/* Color Pallette -- "Copy of Copy of Copy of Holland" on Adobe Kuler */
+$gray: #2B2B2B;
+$gray_dark: #1F1F1F;
+$gray_light: ##333333;
+
+$blue: #3E6372;
+$blue_light: #578CA1;
+$blue_dark: #28404A;
+
+$teal: #BDE3FA;
+
+$white: #F2F2F7;
+
+
+
+$orange: #FF4B00;
+$orange_dark: #BD3700;
+
+
+/* Text Variables --- Links, text, borders, etc. */
+$color-border: $gray;
+$color-border-dark: $gray_dark;
+$color-border-light: $gray_light;
+$color-highlight;
+$color-link;
+$color-link-dark;
+$color-link-light;
+$color-text: $gray;
+$color-text-light;
+$color-text-lightest;
+
+
+@import "foundation_and_overrides";
+
+$text_color: orange;
+$link_color: white;
 $font-stack: Helvetica, sans-serif;
- 
+
+
+
+
+
 p{
   color: $text_color;
 
@@ -10,7 +48,8 @@ a{
   color: $text_color;
     &:hover {
         color:link_color;
-       
+       z-index:999;   
+    transform: scale(1.1); 
     }
 }
 
@@ -33,6 +72,14 @@ top-bar-section {
 
 }
 
-h1 {
-  color: $link_color;
+h1, h2, h3,h4,h5 {
+  color: $text_color;
 }
+
+
+
+
+.nav {
+  background-color: $link_color;
+}
+

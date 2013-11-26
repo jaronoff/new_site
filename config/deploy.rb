@@ -10,7 +10,7 @@ role :db,  "web432.webfaction.com", :primary => true
 set :user, "jaronoff"
 set :scm_username, "jaronoff"
 set :use_sudo, false
-# default_run_options[:pty] = true
+default_run_options[:pty] = true
 
 # set :format, :pretty
 # set :log_level, :debug

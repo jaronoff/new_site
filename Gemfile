@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 # Models
 gem 'compass' # you need this or you get an err
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'foundation-rails'
 gem 'high_voltage'
 gem 'font-awesome-rails'
 
