@@ -1,9 +1,13 @@
 class Behance
+  @@behance_api_key =  'JozfVr61PLTbJ7obHSpNtRInKImNO5Ur'
 
-  @@url = "http://www.behance.net/v2/users/matiascorea/projects?api_key=#{ENV['BEHANCE_API']}"
+  @@behance_id = 'josharonoff'
+
+  @@url = "http://www.behance.net/v2/users/#{@@behance_id}/projects?api_key=#{@@behance_api_key}"
+
   def self.get_projects
     results = RestClient.get(@@url)
 
-    puts results
+    return JSON.parse results
   end
 end
