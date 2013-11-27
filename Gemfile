@@ -44,6 +44,15 @@ group :doc do
   gem 'sdoc', :require => false
 end
 
+# User for storing environment variables
+gem "figaro", "~> 0.7.0"
+
+# Used to get data from the url
+gem "rest-client", "~> 1.6.7"
+
+# Let's us handle errors and know how to deal with it
+gem "better_errors", "~> 1.0.1", group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -59,3 +68,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Wed Nov 27
+# 10:47 mins
