@@ -71,3 +71,7 @@ end
 
 # Wed Nov 27
 # 22:30 mins
+
+#5:51pm - 6:15pm
+
+#6:40pm -7:07pm
