@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b56b918-a8b6-4dcf-b168-f02e40924466" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/field.rb" afterPath="$PROJECT_DIR$/app/models/field.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project.rb" afterPath="$PROJECT_DIR$/app/models/project.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_cover.rb" afterPath="$PROJECT_DIR$/app/models/project_cover.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_field.rb" afterPath="$PROJECT_DIR$/app/models/project_field.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_owner.rb" afterPath="$PROJECT_DIR$/app/models/project_owner.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_owner_field.rb" afterPath="$PROJECT_DIR$/app/models/project_owner_field.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_owner_image.rb" afterPath="$PROJECT_DIR$/app/models/project_owner_image.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project_stat.rb" afterPath="$PROJECT_DIR$/app/models/project_stat.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129225841_create_projects.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129225841_create_projects.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230003_create_fields.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230003_create_fields.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230131_create_project_fields.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230131_create_project_fields.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230205_create_project_covers.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230205_create_project_covers.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230340_create_project_owners.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230340_create_project_owners.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230521_create_project_owner_images.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230521_create_project_owner_images.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230554_create_project_owner_fields.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230554_create_project_owner_fields.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131129230659_create_project_stats.rb" afterPath="$PROJECT_DIR$/db/migrate/20131129230659_create_project_stats.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/behance.rb" afterPath="$PROJECT_DIR$/lib/behance.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/project_owner_fields.yml" afterPath="$PROJECT_DIR$/test/fixtures/project_owner_fields.yml" />
     </list>
     <ignored path="new_site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +60,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.8736842">
+            <state line="71" column="0" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.85263157">
               <folding />
             </state>
           </provider>
@@ -801,7 +780,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.8736842">
+        <state line="71" column="0" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.85263157">
           <folding />
         </state>
       </provider>

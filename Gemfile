@@ -69,13 +69,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Wed Nov 27
-# 22 mins
 
-# friday nov 29
-# 24 mins
-# 27 mins
-
-# Sat nov 30
-# 55 mins
-# 22 mins
