@@ -94,15 +94,15 @@ class Behance
                 project_owner_id: project_owner.id,
                 field_id: field.id
             )
+          end
 
-            # Here we remove any project owner fields that have been removed from the behance user account
-            owner_fields_to_be_removed = ProjectOwnerField.where(project_owner_id: project_owner.id).map(&:field).map(&:name) - owner['fields']
+          # Here we remove any project owner fields that have been removed from the behance user account
+          owner_fields_to_be_removed = ProjectOwnerField.where(project_owner_id: project_owner.id).map(&:field).map(&:name) - owner['fields']
 
-            owner_fields_to_be_removed.each do |removed_owner_field_name|
-              field_found = Field.where(name: removed_owner_field_name).first
+          owner_fields_to_be_removed.each do |removed_owner_field_name|
+            field_found = Field.where(name: removed_owner_field_name).first
 
-              ProjectOwnerField.where(project_owner_id: project_owner.id, field_id: field_found.id).first.delete
-            end
+            ProjectOwnerField.where(project_owner_id: project_owner.id, field_id: field_found.id).first.delete
           end
         end
 
