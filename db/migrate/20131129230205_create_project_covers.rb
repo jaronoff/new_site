@@ -6,5 +6,8 @@ class CreateProjectCovers < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :project_covers, [:project_id, :url]
+
   end
 end

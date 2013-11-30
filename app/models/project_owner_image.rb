@@ -12,7 +12,9 @@
 class ProjectOwnerImage < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
 
-  has_one :project_owner
+  belongs_to :project_owner
+
+  validates_uniqueness_of :project_owner_id, scope: :url
 end

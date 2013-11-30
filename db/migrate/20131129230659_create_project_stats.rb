@@ -7,5 +7,8 @@ class CreateProjectStats < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :project_stats, :project_id
+
   end
 end

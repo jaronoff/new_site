@@ -70,8 +70,12 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # Wed Nov 27
-# 22:30 mins
+# 22 mins
 
-#5:51pm - 6:15pm
+# friday nov 29
+# 24 mins
+# 27 mins
 
-#6:40pm -7:07pm
+# Sat nov 30
+# 55 mins
+# 22 mins

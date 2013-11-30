@@ -6,5 +6,8 @@ class CreateProjectOwnerImages < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :project_owner_images, [:project_owner_id, :url]
+
   end
 end

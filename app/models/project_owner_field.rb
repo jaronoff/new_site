@@ -12,9 +12,12 @@
 class ProjectOwnerField < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
 
   belongs_to :field
 
-  has_one :project_owner
+  belongs_to :project_owner
+
+  validates_uniqueness_of :project_owner_id, scope: :field_id
+
 end

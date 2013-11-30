@@ -6,5 +6,8 @@ class CreateProjectFields < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :project_fields, [:project_id, :field_id]
+
   end
 end

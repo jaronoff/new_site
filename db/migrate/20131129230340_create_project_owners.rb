@@ -13,5 +13,8 @@ class CreateProjectOwners < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :project_owners, :behance_id
+
   end
 end

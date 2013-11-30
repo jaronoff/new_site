@@ -13,5 +13,7 @@
 class ProjectStat < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
+
+  validates :project_id, presence: true, uniqueness: true
 end

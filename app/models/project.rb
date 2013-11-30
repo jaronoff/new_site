@@ -30,6 +30,8 @@ class Project < ActiveRecord::Base
   has_many :project_owner_images
 
   has_one :project_stat
+
+  validates :behance_id, uniqueness: true, presence: true
 end
 
 

@@ -19,9 +19,11 @@
 class ProjectOwner < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
 
   has_many :project_owner_fields
 
   has_many :project_owner_images
+
+  validates :behance_id, uniqueness: true, presence: true
 end

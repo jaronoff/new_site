@@ -11,7 +11,6 @@ class Behance
     results = JSON.parse results
 
     results['projects'].each do |project|
-
       # Here we find the project, and if we can't find it we create it
       created_project = Project.find_or_create_by(behance_id: project['id'])
 
@@ -29,15 +28,33 @@ class Behance
       project['fields'].each do |field|
         field = Field.find_or_create_by(name: field)
 
-        ProjectField.create(project_id: created_project.id, field_id: field.id)
+        ProjectField.find_or_create_by(project_id: created_project.id, field_id: field.id)
+      end
+
+      # Because you may have removed some project fields, we will have to delete any ones
+      # that no longer exist
+      fields_to_be_removed = ProjectField.where(project_id: created_project.id).map(&:field).map(&:name) - project['fields']
+
+      # We remove any fields that no longer exist in the Behance Project
+      fields_to_be_removed.each do |field_name|
+        field_record = Field.where(name: field_name).first
+
+        ProjectField.where(project_id: created_project.id, field_id: field_record.id).first.delete
       end
 
       # Here we save the project covers
       project['covers'].each do |cover_key, url|
-        ProjectCover.create(project_id: created_project.id, url: url)
+        ProjectCover.find_or_create_by(project_id: created_project.id, url: url)
       end
 
-      # Here we save the Project Owners for the project
+      # Here we remove any project covers that no longer exist in the Behance project
+      covered_to_be_removed = ProjectCover.where(project_id: created_project.id).pluck(:url) - project['covers'].values
+
+      covered_to_be_removed.each do |removed_cover_url|
+        ProjectCover.where(project_id: created_project.id, url: removed_cover_url).first.delete
+      end
+
+      # Here we save/update the Project Owners for the project
       project['owners'].each do |owner|
         project_owner = ProjectOwner.find_or_create_by(behance_id: owner['id'])
 
@@ -52,15 +69,22 @@ class Behance
           url: owner['url']
         )
 
-        # Here we save the Project Owner Images
+        # Here we save/update the Project Owner Images
         owner['images'].each do |key, image_url|
           ProjectOwnerImage.find_or_create_by(
               project_owner_id: project_owner.id,
               url: image_url
-          )
+        )
         end
 
-        # Here we save the Project Owner Fields
+        # Here we remove any project owner images that have been removed from the Behance user account
+        owner_images_to_be_removed = ProjectOwnerImage.where(project_owner_id: project_owner.id).pluck(:url) - owner['images'].values
+
+        owner_images_to_be_removed.each do |removed_owner_image_url|
+          ProjectOwnerImage.where(project_owner_id: project_owner.id, url: removed_owner_image_url).first.delete
+        end
+
+        # Here we save/update the Project Owner Fields
         owner['fields'].each do |field|
           field = Field.find_or_create_by(name: field)
 
@@ -68,12 +92,22 @@ class Behance
               project_owner_id: project_owner.id,
               field_id: field.id
           )
+
+          # Here we remove any project owner fields that have been removed from the behance user account
+          owner_fields_to_be_removed = ProjectOwnerField.where(project_owner_id: project_owner.id).map(&:field).map(&:name) - owner['fields']
+
+          owner_fields_to_be_removed.each do |removed_owner_field_name|
+            field_found = Field.where(name: removed_owner_field_name).first
+
+            ProjectOwnerField.where(project_owner_id: project_owner.id, field_id: field_found.id).first.delete
+          end
         end
       end
 
-      # Here we save the Project Stats
-      ProjectStat.find_or_create_by(
-          project_id: created_project.id,
+      # Here we save/update the Project Stats
+      project_stat = ProjectStat.find_or_create_by( project_id: created_project.id )
+
+      project_stat.update_attributes(
           appreciation: project['stats']['appreciations'],
           comments: project['stats']['comments']
       )
@@ -82,34 +116,3 @@ class Behance
     return true
   end
 end
-
-{"id"=>11939065,
- "name"=>"Translational Research and Clinical Practice Book Cover",
- "published_on"=>1383685855,
- "created_on"=>1383684852,
- "modified_on"=>1383685855,
- "url"=>"http://www.behance.net/gallery/Translational-Research-and-Clinical-Practice-Book-Cover/11939065",
- "privacy"=>"public",
- "fields"=>["Art Direction", "Graphic Design", "Icon Design"],
- "covers"=>{"115"=>"http://behance.vo.llnwd.net/profiles3/115734/projects/11939065/115x7567b956aac426ff67e53f95c9cd53c2.jpeg",
-            "202"=>"http://behance.vo.llnwd.net/profiles3/115734/projects/11939065/7567b956aac426ff67e53f95c9cd53c2.jpeg",
-            "404"=>"http://behance.vo.llnwd.net/profiles3/115734/projects/11939065/404x7567b956aac426ff67e53f95c9cd53c2.jpeg",
-            "230"=>"http://behance.vo.llnwd.net/profiles3/115734/projects/11939065/230x7567b956aac426ff67e53f95c9cd53c2.jpeg"},
- "owners"=>[{"id"=>115734,
-             "first_name"=>"Josh",
-             "last_name"=>"Aronoff",
-             "username"=>"josharonoff",
-             "city"=>"Pittsburgh",
-             "state"=>"Pennsylvania",
-             "country"=>"United States",
-             "company"=>"Aronoff Creative",
-             "url"=>"http://www.behance.net/josharonoff",
-             "images"=>{"50"=>"http://behance.vo.llnwd.net/profiles3/115734/50x577571c06b4dd76ecc83e2fa8d33b129.png",
-                        "115"=>"http://behance.vo.llnwd.net/profiles3/115734/115x577571c06b4dd76ecc83e2fa8d33b129.png",
-                        "138"=>"http://behance.vo.llnwd.net/profiles3/115734/577571c06b4dd76ecc83e2fa8d33b129.png"},
-             "fields"=>["UI/UX", "Web Design", "Graphic Design"]}],
- "stats"=>{
-     "appreciations"=>2,
-     "comments"=>0},
- "for_sale"=>0
-}

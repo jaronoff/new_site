@@ -12,7 +12,9 @@
 class ProjectField < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
 
   belongs_to :field
+
+  validates_uniqueness_of :project_id, scope: :field_id
 end

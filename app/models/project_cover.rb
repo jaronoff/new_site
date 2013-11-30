@@ -12,5 +12,7 @@
 class ProjectCover < ActiveRecord::Base
   # Model Associations
   # ==================
-  has_one :project
+  belongs_to :project
+
+  validates_uniqueness_of :project_id, scope: :url
 end
