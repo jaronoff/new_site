@@ -1,4 +1,5 @@
 NewSite::Application.routes.draw do
+  get "projects/update"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -18,3 +18,9 @@
 .DS_Store
 /log/*
 /tmp/*
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore ruby mine stuff
+/.idea

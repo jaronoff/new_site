@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id           :integer          not null, primary key
+#  behance_id   :integer
+#  name         :string(255)
+#  published_on :integer
+#  created_on   :integer
+#  modified_on  :integer
+#  url          :string(255)
+#  privacy      :string(255)
+#  for_sale     :float
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  behance_id: 1
+  name: MyString
+  published_on: 1
+  created_on: 1
+  modified_on: 1
+  url: MyString
+  privacy: MyString
+  for_sale: 1.5
+
+two:
+  behance_id: 1
+  name: MyString
+  published_on: 1
+  created_on: 1
+  modified_on: 1
+  url: MyString
+  privacy: MyString
+  for_sale: 1.5
