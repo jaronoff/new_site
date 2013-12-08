@@ -1,7 +1,7 @@
 /* Color Pallette -- "Copy of Copy of Copy of Holland" on Adobe Kuler */
 $gray: #2B2B2B;
 $gray_dark: #1F1F1F;
-$gray_light: ##333333;
+$gray_light: #333333;
 
 $blue: #3E6372;
 $blue_light: #578CA1;
@@ -21,13 +21,13 @@ $orange_dark: #BD3700;
 $color-border: $gray;
 $color-border-dark: $gray_dark;
 $color-border-light: $gray_light;
-$color-highlight;
-$color-link;
+/* $color-highlight;
+$color-link: 
 $color-link-dark;
 $color-link-light;
 $color-text: $gray;
 $color-text-light;
-$color-text-lightest;
+$color-text-lightest; */
 
 
 @import "foundation_and_overrides";
