@@ -1,11 +1,12 @@
 <%= content_for :page_title, 'Get In Touch' %>
 
-<h1>
-  <%= yield(:page_title) %></h1>
+
 
 <!-- Contact Details -->
-<div class="row">
-  <div class="large-6 columns">
+
+  <div class="large-6 small-12 columns">
+    <h1>
+  <%= yield(:page_title) %></h1>
     <h3>Use the form to contact me.</h3>
     <p>
       I'd love to hear from you. Whether you need help with a web project or your application needs some user testing or a variety of other needs, please get in touch with me.
@@ -18,7 +19,7 @@
     <p>Or give me a call: <a href="tel:+14126132500">412-613-2500</a></p> 
   </div>
   <form>
-    <div class="large-6 columns">
+    <div class="large-6 columns form">
       <input type="text" placeholder="Name:">
       <input type="text" placeholder="Email:" />
       <textarea placeholder="Message:"></textarea>
@@ -30,4 +31,3 @@
     
     </div>
   </form>
-</div>
