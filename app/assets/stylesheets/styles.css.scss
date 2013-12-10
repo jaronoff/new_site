@@ -12,6 +12,7 @@
 
 #capabilities {
   background-color: $green;
+  @extend .content-padding;
   height:390px;
   
 }
@@ -41,7 +42,9 @@ a{
     }
 }
 
-
+img {
+  max-width: 100%;
+}
 
 body {
 	background: #ffffff url('low_contrast_linen.png') repeat fixed center; 
@@ -51,6 +54,7 @@ body {
 
 .top-bar {
   border-bottom: $green_dark;
+
 }
 
 .content {
@@ -93,6 +97,7 @@ html, body {
   /* .push must be the same height as footer */
   height: 142px; 
 }
+
 
 
 
