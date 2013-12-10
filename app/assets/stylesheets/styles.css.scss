@@ -1,3 +1,7 @@
+
+
+
+
 /* Color Pallette -- "Copy of Copy of Copy of Holland" on Adobe Kuler */
 $gray: #2B2B2B;
 $gray_dark: #1F1F1F;
@@ -7,47 +11,42 @@ $blue: #3E6372;
 $blue_light: #578CA1;
 $blue_dark: #28404A;
 
-$teal: #BDE3FA;
+$green: #5c832f;
+$green_light: #76a83b;
+$green_dark: #284907;
+
 
 $white: #F2F2F7;
 
-
-
-$orange: #FF4B00;
-$orange_dark: #BD3700;
 
 
 /* Text Variables --- Links, text, borders, etc. */
 $color-border: $gray;
 $color-border-dark: $gray_dark;
 $color-border-light: $gray_light;
-/* $color-highlight;
-$color-link: 
-$color-link-dark;
-$color-link-light;
-$color-text: $gray;
-$color-text-light;
-$color-text-lightest; */
 
 
-@import "foundation_and_overrides";
 
-$text_color: orange;
-$link_color: white;
+$text_color: $white;
+$link_color: $green;
 $font-stack: Helvetica, sans-serif;
 
 
+#capabilities {
+  background-color: $green;
+}
 
 
+/* Type Styles */
 
 p{
-  color: $text_color;
+  color: $gray;
 
 }
 a{
-  color: $text_color;
+  color: lighten( $link_color, 10% );
     &:hover {
-        color:link_color;
+        color: $link_color;
        z-index:999;   
     transform: scale(1.1); 
     }
@@ -58,28 +57,52 @@ a{
 body {
 	background: #ffffff url('low_contrast_linen.png') repeat fixed center; 
 	font: 100% $font-stack;
-  color: $text_color;
 }
 
 
-
-h4 {
-	font-size:3em;
-	color: $link_color;
+.top-bar {
+  border-bottom: $green_dark;
 }
 
-top-bar-section {
-
+.content {
+  background-color: $white;
+  padding:20px 15px 0 15px;
 }
+.footer {
+  background-color: $gray_dark;
+  padding:20px 15px 0 15px;
+  height:150px;
+}
+
+
 
 h1, h2, h3,h4,h5 {
-  color: $text_color;
+  color: $green_dark;
 }
 
 
 
 
-.nav {
-  background-color: $link_color;
+/* Footer Styles */
+* {
+  margin: 0;
 }
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px; 
+}
+
+
 

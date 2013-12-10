@@ -1,18 +1,18 @@
-<div class="contain-to-grid sticky ">
-<nav class="top-bar">
-
-  <ul class="title-area large-3 columns top-bar-section">
-      <li class="name"><strong><%= link_to 'Josh Aronoff', page_path('home') %> </strong></li>
-      
-    <li class="toggle-topbar icon"><a href="#"><span>Menu</span></a></li>
+<div class="contain-to-grid sticky">
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">  
+    <li class="name">
+      <h1><a href="#"><%= link_to 'Josh Aronoff', page_path('home') %></a></h1>
+    </li>
   </ul>
-
   <section class="top-bar-section">
- 	 <ul class="right hover">
- 	 	<%= render :partial => 'layouts/globalnav' %>
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <%= render :partial => 'layouts/globalnav' %>
     </ul>
-  </section>
- 
 </nav>
 </div>
+
+
+
 
