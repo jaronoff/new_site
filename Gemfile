@@ -25,8 +25,8 @@ gem 'jquery-rails'
 
 
 # Models
-gem 'compass' # you need this or you get an err
-gem 'foundation-rails'
+gem 'compass'
+gem 'zurb-foundation'
 gem 'high_voltage'
 gem 'font-awesome-rails'
 

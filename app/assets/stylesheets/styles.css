@@ -1,0 +1,121 @@
+/* _reset.scss */
+/* line 6, _reset.scss */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Pallette -- "Copy of Copy of Copy of Holland" on Adobe Kuler */
+/* Text Variables --- Links, text, borders, etc. */
+/* line 4, styles.css.scss */
+.content-padding, #capabilities, .content, .footer {
+  padding: 20px 15px 0 15px;
+}
+
+/* line 9, styles.css.scss */
+.form {
+  padding-top: 80px;
+}
+
+/* line 13, styles.css.scss */
+#capabilities {
+  background-color: #5c832f;
+  height: 390px;
+}
+
+/* line 19, styles.css.scss */
+#capabilities h3 {
+  color: #fff;
+}
+
+/* line 22, styles.css.scss */
+#capabilities p {
+  color: #fff;
+}
+
+/* line 26, styles.css.scss */
+i {
+  padding-right: 10px;
+}
+
+/* Type Styles */
+/* line 32, styles.css.scss */
+p {
+  color: #2b2b2b;
+}
+
+/* line 36, styles.css.scss */
+a {
+  color: #76a93c;
+}
+/* line 38, styles.css.scss */
+a:hover {
+  color: #5c832f;
+  z-index: 999;
+  transform: scale(1.1);
+}
+
+/* line 45, styles.css.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 49, styles.css.scss */
+body {
+  background: white url("low_contrast_linen.png") repeat fixed center;
+  font: 100% Helvetica, sans-serif;
+}
+
+/* line 55, styles.css.scss */
+.top-bar {
+  border-bottom: #284907;
+}
+
+/* line 60, styles.css.scss */
+.content {
+  background-color: #f2f2f7;
+}
+
+/* line 65, styles.css.scss */
+.footer {
+  background-color: #1f1f1f;
+  height: 150px;
+}
+
+/* line 73, styles.css.scss */
+h1, h2, h3, h4, h5 {
+  color: #284907;
+}
+
+/* Footer Styles */
+/* line 81, styles.css.scss */
+* {
+  margin: 0;
+}
+
+/* line 84, styles.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 87, styles.css.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+
+/* line 92, styles.css.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 96, styles.css.scss */
+.footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px;
+}
