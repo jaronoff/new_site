@@ -11,13 +11,9 @@
  *= require_self
  *= require_tree .
  *= require font-awesome
- */
- 
-
-
-
-
  *= require foundation_and_overrides
+ */
+
  @import "foundation/components/grid";
  @import "font-awesome";
  @import 'foundation-social-web-icons';
