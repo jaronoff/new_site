@@ -1,79 +1,49 @@
-require 'bundler/capistrano'
- 
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
- 
-set :user, "jaronoff"
+#App Settings
 set :application, 'Josh_New_Site'
-set :repository, 'git@example.com:me/my_repo.git'
-set :deploy_to, "/home/jaronoff/webapps/joshsite"
-set :default_stage,"production"
-set :assets_path, "#{deploy_to}/shared/assets"
-set :verbose_command_log, true
- 
-set :use_sudo, false
-set :deploy_via, :checkout
+set :repository, 'git@github.com:jaronoff/new_site.git'
 set :branch, "master"
- 
-set :default_environment, {
-  'PATH' => "#{deploy_to}/bin:$PATH",
-  'GEM_HOME' => "#{deploy_to}/gems",
-  'RAILS_ENV' => "#{default_stage}"
-}
- 
+
 set :scm, :git
-role :web, "web432.webfaction.com"
-role :app, "web432.webfaction.com"
-role :db,  "web432.webfaction.com", :primary => true 
- 
-desc "Restart nginx"
-task :restart do
-  run "#{deploy_to}/bin/restart"
-end
- 
-desc "Start nginx"
-task :start do
-  run "#{deploy_to}/bin/start"
-end
- 
-desc "Stop nginx"
-task :stop do
-  run "#{deploy_to}/bin/stop"
-end
- 
+set :deploy_to, '/home/jaronoff/webapps/joshsite'
+
+
+# set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
+# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+
+role :web, "75.126.113.172"									 # Your HTTP server, Apache/etc
+role :app, "75.126.113.172"                   # This may be the same as your `Web` server
+role :db,  "75.126.113.172", :primary => true # This is where Rails migrations will run
+
+
+#User Settings
+set :user, "jaronoff"
+set :scm_username, "jaronoff"
+set :use_sudo, false
+default_run_options[:pty] = true
+set :ssh_options, { :forward_agent => true }
+set :deploy_via, :remote_cache
+
+
 namespace :deploy do
-  
-  puts "============================================="
-  puts "SIT BACK AND RELAX WHILE CAPISTRANO ROCKS ON!"
-  puts "============================================="
-  
-  desc "Seed database"
-  task :remakedb do
-    run "cd #{deploy_to}/current; bundle exec rake db:migrate RAILS_ENV=#{default_stage}"
-    run "cd #{deploy_to}/current; bundle exec rake db:seed RAILS_ENV=#{default_stage}"
+  desc "Restart nginx"
+  task :restart do
+    run "#{deploy_to}/bin/restart"
   end
-  
-  desc "Seed database"
-  task :seed do
-    run "cd #{deploy_to}/current; bundle exec rake db:seed RAILS_ENV=#{default_stage}"
-  end
-  
-  desc "Migrate database"
-  task :migrate do
-    run "cd #{deploy_to}/current; bundle exec rake db:migrate RAILS_ENV=#{default_stage}"
-  end
- 
-  namespace :assets do
-    desc 'Run the precompile task locally and rsync with shared'
-    task :precompile, :roles => :web, :except => { :no_release => true } do
-      %x{bundle exec rake assets:precompile}
-      %x{rsync --recursive --times --rsh=ssh --compress --human-readable --progress public/assets #{domain}:#{assets_path}}
-      %x{bundle exec rake assets:clean}
-    end
-  end
-  
 end
- 
-after "deploy", "assets:precompile"
-after "deploy", "deploy:migrate"
-after "deploy", "restart"
+
+
+
+# if you want to clean up old releases on each deploy uncomment this:
+# after "deploy:restart", "deploy:cleanup"
+
+# if you're still using the script/reaper helper you will need
+# these http://github.com/rails/irs_process_scripts
+
+# If you are using Passenger mod_rails uncomment this:
+# namespace :deploy do
+#   task :start do ; end
+#   task :stop do ; end
+#   task :restart, :roles => :app, :except => { :no_release => true } do
+#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+#   end
+# end

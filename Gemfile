@@ -25,7 +25,7 @@ gem 'jquery-rails'
 
 
 # Models
-gem 'compass'
+gem "compass-rails", "~> 1.1.2"
 gem 'zurb-foundation'
 gem 'high_voltage'
 gem 'font-awesome-rails'
@@ -58,6 +58,7 @@ gem "better_errors", "~> 1.0.1", group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+
 
 # Use Capistrano for deployment
 group :development do

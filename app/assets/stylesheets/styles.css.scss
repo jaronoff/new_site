@@ -1,14 +1,40 @@
 @import 'reset';
 @import 'colors';
+@import 'base';
 
 .content-padding {
   padding:20px 15px 0 15px;
 }
 
+.nav-height {
+  height:78px;
+}
+
+
 
 .form {
   padding-top: 80px;
 }
+
+
+
+nav.top-bar, nav.top-bar ul {
+  @extend .nav-height;
+  background-color:$green_dark;
+}
+
+nav.top-bar li {
+  @extend .nav-height;
+ }
+
+nav.top-bar li a {
+  padding-top: 20px;
+}
+
+nav.top-bar li.hover {
+  color:$green;
+}
+
 
 #capabilities {
   background-color: $green;
@@ -41,20 +67,28 @@ a{
     transform: scale(1.1); 
     }
 }
+h1, h2, h3,h4,h5 {
+  color: $green_dark;
+}
 
 img {
   max-width: 100%;
 }
 
 body {
-	background: #ffffff url('low_contrast_linen.png') repeat fixed center; 
+	background: #ffffff url('retina_wood.png') repeat fixed center; 
 	font: 100% $font-stack;
 }
 
 
-.top-bar {
+.top-bar, .title-area, .contain-to-grid, .top-bar-section li.hover>a:not(.button) {
   border-bottom: $green_dark;
+  background-color: $green_dark;
+  height:78px;
 
+}
+.top-bar-section li a:not(.button):hover {
+  background-color: $green;
 }
 
 .content {
@@ -70,8 +104,15 @@ body {
 
 
 
-h1, h2, h3,h4,h5 {
-  color: $green_dark;
+
+
+button, .button {
+  background-color:$green_dark;
+    &:hover {
+        background-color: lighten( $green_dark, 10% );
+       z-index:999;   
+    transform: scale(1.1); 
+    }
 }
 
 
