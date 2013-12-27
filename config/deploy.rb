@@ -4,7 +4,7 @@ set :repository, 'git@github.com:jaronoff/new_site.git'
 set :branch, "master"
 
 set :scm, :git
-set :deploy_to, '/home/jaronoff/webapps/joshsite'
+set :deploy_to, '/home/jaronoff/webapps/joshsite/new_site'
 
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
