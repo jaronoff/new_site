@@ -4,15 +4,15 @@ set :repository, 'git@github.com:jaronoff/new_site.git'
 set :branch, "master"
 
 set :scm, :git
-set :deploy_to, '/home/jaronoff/webapps/joshsite/new_site'
+set :deploy_to, '/home/jaronoff/webapps/portfolio_site/'
 
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "75.126.113.172"									 # Your HTTP server, Apache/etc
-role :app, "75.126.113.172"                   # This may be the same as your `Web` server
-role :db,  "75.126.113.172", :primary => true # This is where Rails migrations will run
+role :web, "web432.webfaction.com"									 # Your HTTP server, Apache/etc
+role :app, "web432.webfaction.com"                   # This may be the same as your `Web` server
+role :db,  "web432.webfaction.com", :primary => true # This is where Rails migrations will run
 
 
 #User Settings

@@ -21,3 +21,7 @@ module NewSite
     # config.i18n.default_locale = :de
   end
 end
+
+# Enable the asset pipeline
+config.assets.enabled = true
+config.assets.paths << "#{Rails.root}/app/assets/fonts" 
