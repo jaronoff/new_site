@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131129230659) do
+ActiveRecord::Schema.define(version: 20140102024032) do
 
   create_table "fields", force: true do |t|
     t.string   "name"
@@ -72,6 +72,15 @@ ActiveRecord::Schema.define(version: 20131129230659) do
   end
 
   add_index "project_owners", ["behance_id"], name: "index_project_owners_on_behance_id"
+
+  create_table "project_ownerships", force: true do |t|
+    t.integer  "project_owner_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_ownerships", ["project_owner_id", "project_id"], name: "index_project_ownerships_on_project_owner_id_and_project_id"
 
   create_table "project_stats", force: true do |t|
     t.integer  "project_id"

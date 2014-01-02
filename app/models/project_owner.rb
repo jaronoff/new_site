@@ -19,7 +19,9 @@
 class ProjectOwner < ActiveRecord::Base
   # Model Associations
   # ==================
-  belongs_to :project
+  has_many :project_ownerships
+
+  has_many :projects, through: :project_ownerships
 
   has_many :project_owner_fields
 

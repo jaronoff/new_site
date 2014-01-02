@@ -21,17 +21,26 @@ class Project < ActiveRecord::Base
   # ==================
   has_many :project_covers
 
-  has_many :project_owners
+  has_many :project_ownerships
+
+  has_many :project_owners, through: :project_ownerships
 
   has_many :project_fields
 
-  has_many :project_owner_fields
-
-  has_many :project_owner_images
-
   has_one :project_stat
 
+  # Model Validations
+  # ==================
   validates :behance_id, uniqueness: true, presence: true
+
+  # Class Methods
+  # =============
+  def self.with_includes
+    # This will include all the associated models we need to improve performance of database scouring
+    self.includes([:project_covers, :project_owners, :project_fields, :project_stat])
+        .includes([:project_owners => :project_owner_fields, :project_owners => :project_owner_images])
+        .includes([:project_fields => :field])
+  end
 end
 
 

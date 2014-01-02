@@ -71,6 +71,8 @@ class Behance
             url: owner['url']
           )
 
+          ProjectOwnership.create(project_owner_id: project_owner.id, project_id: created_project.id)
+
           # Here we save/update the Project Owner Images
           owner['images'].each do |key, image_url|
             ProjectOwnerImage.find_or_create_by(

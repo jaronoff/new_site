@@ -1,0 +1,30 @@
+<% @project.project_covers.each do |project_cover| %>
+  <%= project_cover.url %>
+<% end %>
+
+<% @project.project_owners.each do |project_owner| %>
+  <%= project_owner.behance_id %>
+  <%= project_owner.first_name %>
+  <%= project_owner.last_name %>
+  <%= project_owner.username %>
+  <%= project_owner.city %>
+  <%= project_owner.state %>
+  <%= project_owner.country %>
+  <%= project_owner.company %>
+  <%= project_owner.url %>
+
+  <% project_owner.project_owner_fields.each do |project_owner_field| %>
+    <% project_owner_field.field.name %>
+  <% end %>
+
+  <% project_owner.project_owner_images.each do |project_owner_image| %>
+    <% project_owner_image.url %>
+  <% end %>
+<% end %>
+
+<% @project.project_fields.each do |project_field| %>
+  <%= project_field.field.name %>
+<% end %>
+
+<%= @project.project_stat.appreciation %>
+<%= @project.project_stat.comments %>

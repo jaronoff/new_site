@@ -4,4 +4,12 @@ class ProjectsController < ApplicationController
 
     redirect_to root_url
   end
+
+  def index
+    @projects = Project.with_includes.all
+  end
+
+  def show
+    @project = Project.with_includes.find(params[:id])
+  end
 end
