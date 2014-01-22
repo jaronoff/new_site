@@ -1,4 +1,4 @@
-<%= content_for :page_title, 'Projects Index' %>
+<%= content_for :page_title, 'Projects' %>
 
 <h1><%= yield(:page_title) %></h1>
 <dl class="sub-nav">
@@ -8,23 +8,66 @@
   <dd><a href="#">Web Design</a></dd>
   <dd><a href="#">Graphic Design</a></dd>
 </dl>
-<div class="row">
-    <div class="large-12 show-for-small columns">
-          <h3>All</h3><hr>
-        </div>
 
-                         
-          <div class="large-3 small-3 columns">
+<div class="row">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+          <div class="large-3 small-6 columns">
             <img src="http://placehold.it/500x500&amp;text=Thumbnail">
             <div class="panel">
               <p>Description</p>
             </div>
           </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+        </div>
 
-<% @projects.each do |project| %>
-  <% project.project_covers.each do |project_cover| %>
-    <img src="<%= project_cover.url %>">
-  <% end %>
+
+
+<div class="row">
+    <div class="large-12 show-for-small columns">
+          <h3>All</h3><hr>
+        </div>
+
+             <% @projects.each do |project| %>            
+          <div class="large-3 small-3 columns">
+            <% project.project_covers.each do |project_cover| %>
+            <img src="<%= project_cover.url %>">
+            <% end %>
+            <div class="panel">
+              <% project.project_fields.each do |project_field| %>
+              <p><%= project_field.field.name %></p>
+             <% end %>
+            </div>
+          </div>
+
+
+  
+    
+  
 
   <% project.project_owners.each do |project_owner| %>
     <%= project_owner.behance_id %>

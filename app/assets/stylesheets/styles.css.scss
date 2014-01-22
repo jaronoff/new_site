@@ -137,6 +137,15 @@ html, body {
   height: 142px; 
 }
 
+@font-face {
+  font-family:'neris';
+  src:font-url('Neris-SemiBold.otf');
+  src:font-url('Neris-SemiBold.otf?#iefix') format('embedded-opentype');
+}
 
-
+title-area {
+  font-family: neris;
+  font-size: 20px;
+  color:#fff;
+}
 
