@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 # Models
 gem "compass-rails", "~> 1.1.2"
-gem 'zurb-foundation'
+gem "zurb-foundation", "~> 4.3.2"
 gem 'high_voltage'
 gem 'font-awesome-rails'
 

@@ -9,76 +9,63 @@
   <dd><a href="#">Graphic Design</a></dd>
 </dl>
 
-<div class="row">
- 
+
+
+
+<% @projects.in_groups_of(4, false).each_with_index do |project_group, project_group_index| %>
+
+  <div class="row">
+
+
+    <% project_group.each_with_index do |project, project_index| %>
+
+      <% if project_group_index == 0 and project_index == 0 %>
+        <div class="row">
           <div class="large-12 show-for-small columns">
-          <h3>Header</h3><hr>
+            <h3>Header</h3>
+            <hr>
+          </div>
         </div>
- 
-          <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
-            <div class="panel">
-              <p>Description</p>
-            </div>
-          </div>
- 
-          <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
-            <div class="panel">
-              <p>Description</p>
-            </div>
-          </div>
- 
-          <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
-            <div class="panel">
-              <p>Description</p>
-            </div>
-          </div>
- 
-          <div class="large-3 small-6 columns">
-            <img src="http://placehold.it/500x500&amp;text=Thumbnail">
-            <div class="panel">
-              <p>Description</p>
-            </div>
-          </div>
- 
+      <% end %>
+
+      <div class="large-3 small-12 columns">
+        <a href="<%= 'projects/' + to_kebab_case(project.name) %>"><img height="500" width="500" src="<%= project.project_covers.last.url %>"></a>
+        <div class="panel">
+          <a href="<%= 'projects/' + to_kebab_case(project.name) %>"><h4><%= project.name %></h4></a>
+          <% project.project_fields.each do |project_field| %>
+            <div><%= project_field.field.name %></div>
+          <% end %>
+          <br>
+
+          <p><%= truncate(project.description, length: 120) %></p>
         </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+<% end %>
 
 
 
-<div class="row">
-    <div class="large-12 show-for-small columns">
-          <h3>All</h3><hr>
-        </div>
 
-             <% @projects.each do |project| %>            
-          <div class="large-3 small-3 columns">
-            <% project.project_covers.each do |project_cover| %>
-            <img src="<%= project_cover.url %>">
-            <% end %>
-            <div class="panel">
-              <% project.project_fields.each do |project_field| %>
-              <p><%= project_field.field.name %></p>
-             <% end %>
-            </div>
-          </div>
-
-
-  
-    
-  
+<% @projects.each do |project| %>
+  <% project.project_covers.each do |project_cover| %>
+    <% project_cover.url %>
+  <% end %>
+  <% project.project_fields.each do |project_field| %>
+    <% project_field.field.name %>
+  <% end %>
 
   <% project.project_owners.each do |project_owner| %>
-    <%= project_owner.behance_id %>
-    <%= project_owner.first_name %>
-    <%= project_owner.last_name %>
-    <%= project_owner.username %>
-    <%= project_owner.city %>
-    <%= project_owner.state %>
-    <%= project_owner.country %>
-    <%= project_owner.company %>
-    <%= project_owner.url %>
+    <% project_owner.behance_id %>
+    <% project_owner.first_name %>
+    <% project_owner.last_name %>
+    <% project_owner.username %>
+    <% project_owner.city %>
+    <% project_owner.state %>
+    <% project_owner.country %>
+    <% project_owner.company %>
+    <% project_owner.url %>
 
     <% project_owner.project_owner_fields.each do |project_owner_field| %>
       <% project_owner_field.field.name %>
@@ -90,11 +77,11 @@
   <% end %>
 
   <% project.project_fields.each do |project_field| %>
-    <h2><%= project_field.field.name %></h2>
+    <% project_field.field.name %>
   <% end %>
 
-  <%= project.project_stat.appreciation %>
-  <%= project.project_stat.comments %>
+  <% project.project_stat.appreciation %>
+  <% project.project_stat.comments %>
 <% end %>
 
 

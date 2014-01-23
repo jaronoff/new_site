@@ -16,8 +16,13 @@ class Behance
         # Here we find the project, and if we can't find it we create it
         created_project = Project.find_or_create_by(behance_id: project['id'])
 
+        project_details = RestClient.get("http://www.behance.net/v2/projects/#{project['id']}?api_key=JozfVr61PLTbJ7obHSpNtRInKImNO5Ur")
+
+        project_details = JSON.parse project_details
+
         created_project.update_attributes(
           name: project['name'],
+          description: project_details["project"]["description"],
           published_on: project['published_on'],
           created_on: project['created_on'],
           modified_on: project['modified_on'],
@@ -121,3 +126,5 @@ class Behance
     return true
   end
 end
+
+

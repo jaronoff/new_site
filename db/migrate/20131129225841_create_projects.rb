@@ -3,6 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.integer :behance_id
       t.string :name
+      t.text :description
       t.integer :published_on
       t.integer :created_on
       t.integer :modified_on

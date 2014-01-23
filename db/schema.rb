@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20140102024032) do
   create_table "projects", force: true do |t|
     t.integer  "behance_id"
     t.string   "name"
+    t.text     "description"
     t.integer  "published_on"
     t.integer  "created_on"
     t.integer  "modified_on"
