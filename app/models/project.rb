@@ -19,7 +19,6 @@ class Project < ActiveRecord::Base
 
   # Model Associations
   # ==================
-  has_many :project_covers
 
   has_many :project_ownerships
 
@@ -27,20 +26,37 @@ class Project < ActiveRecord::Base
 
   has_many :project_fields
 
+  has_many :project_modules
+
   has_one :project_stat
+
+  has_one :project_cover
+
 
   # Model Validations
   # ==================
   validates :behance_id, uniqueness: true, presence: true
 
+  before_save :create_url_name
+
+  def create_url_name
+    puts "$#$%" * 200
+    puts self.name
+    if self.name.present?
+      self.url_name = self.name.split(' ').map { |word| word.downcase.gsub(/\W/, '') }.join('-')
+    end
+  end
+
   # Class Methods
   # =============
   def self.with_includes
     # This will include all the associated models we need to improve performance of database scouring
-    self.includes([:project_covers, :project_owners, :project_fields, :project_stat])
+    self.includes([:project_cover, :project_owners, :project_fields, :project_stat])
         .includes([:project_owners => :project_owner_fields, :project_owners => :project_owner_images])
         .includes([:project_fields => :field])
   end
+
+
 end
 
 

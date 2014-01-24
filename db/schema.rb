@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102024032) do
+ActiveRecord::Schema.define(version: 20140123233157) do
 
   create_table "fields", force: true do |t|
     t.string   "name"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20140102024032) do
   end
 
   add_index "project_fields", ["project_id", "field_id"], name: "index_project_fields_on_project_id_and_field_id"
+
+  create_table "project_modules", force: true do |t|
+    t.integer  "project_id"
+    t.string   "content_type"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "project_owner_fields", force: true do |t|
     t.integer  "project_owner_id"
@@ -102,6 +110,7 @@ ActiveRecord::Schema.define(version: 20140102024032) do
     t.string   "url"
     t.string   "privacy"
     t.float    "for_sale"
+    t.string   "url_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

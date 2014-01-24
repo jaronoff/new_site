@@ -10,6 +10,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :url
       t.string :privacy
       t.float :for_sale
+      t.string :url_name
 
       t.timestamps
     end

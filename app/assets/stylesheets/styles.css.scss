@@ -14,7 +14,9 @@
   padding-top: 80px;
 }
 
-
+.bold {
+  font-weight: bold;
+}
 
 nav.top-bar, nav.top-bar ul {
   @extend .nav-height;

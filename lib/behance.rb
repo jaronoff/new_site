@@ -16,7 +16,7 @@ class Behance
         # Here we find the project, and if we can't find it we create it
         created_project = Project.find_or_create_by(behance_id: project['id'])
 
-        project_details = RestClient.get("http://www.behance.net/v2/projects/#{project['id']}?api_key=JozfVr61PLTbJ7obHSpNtRInKImNO5Ur")
+        project_details = RestClient.get("http://www.behance.net/v2/projects/#{project['id']}?api_key=#{@@behance_api_key}")
 
         project_details = JSON.parse project_details
 
@@ -30,6 +30,21 @@ class Behance
           privacy: project['privacy'],
           for_sale: project['for_sale']
         )
+
+        # Here we re-save the modules of the project
+        ProjectModule.where(project_id: created_project.id).delete_all
+
+        project_details["project"]["modules"].each do |project_module|
+          pm = ProjectModule.create(project_id: created_project.id, content_type: project_module["type"])
+
+          if project_module["type"] == "image"
+            pm.content = project_module["src"]
+          elsif project_module["type"] == "text"
+            pm.content = project_module["text"]
+          end
+
+          pm.save
+        end
 
         # Here we save the project fields
         project['fields'].each do |field|
@@ -51,7 +66,9 @@ class Behance
 
         # Here we save the project covers
         project['covers'].each do |cover_key, url|
-          ProjectCover.find_or_create_by(project_id: created_project.id, url: url)
+          if /orig/.match url
+            ProjectCover.find_or_create_by(project_id: created_project.id, url: url)
+          end
         end
 
         # Here we remove any project covers that no longer exist in the Behance project
