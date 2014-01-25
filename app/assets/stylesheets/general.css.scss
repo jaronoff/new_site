@@ -1,0 +1,58 @@
+@import 'base';
+
+
+// Tags
+// ====
+button, .button {
+  background-color:$green_dark;
+  &:hover {
+    background-color: lighten( $green_dark, 10% );
+    z-index:999;
+    transform: scale(1.1);
+  }
+}
+
+p {
+  color: $gray;
+}
+
+a {
+  color: lighten( $link_color, 10% );
+
+  &:hover {
+    color: $link_color;
+    z-index:999;
+    transform: scale(1.1);
+  }
+}
+
+h1, h2, h3,h4,h5 {
+  color: $green_dark;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #ffffff url('retina_wood.png') repeat fixed center;
+  font: 100% $font-stack;
+}
+
+// Classes
+// ========
+.bold {
+  font-weight: bold;
+}
+
+.content-padding {
+  padding:20px 15px 0 15px;
+}
+
+.content {
+  background-color: $white;
+  @extend .content-padding;
+}
+
+
+

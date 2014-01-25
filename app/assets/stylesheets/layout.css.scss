@@ -1,0 +1,85 @@
+@import 'base';
+
+// Navbar
+// =====
+.nav-height {
+  height:78px;
+}
+
+nav.top-bar {
+  @extend .nav-height;
+  background-color:$green_dark;
+
+  ul {
+    @extend .nav-height;
+    background-color:$green_dark
+  }
+
+  .title-area {
+    font-family: neris;
+    font-size: 20px;
+    color:#fff;
+
+    .name {
+      color:$white;
+    }
+
+  }
+
+  li {
+    @extend .nav-height;
+
+    &:hover { color:$green; }
+
+    a { padding-top: 20px; }
+  }
+}
+
+// Top Bar
+// =======
+.top-bar, .title-area, .contain-to-grid, .top-bar-section li.hover>a:not(.button) {
+  border-bottom: $green_dark;
+  background-color: $green_dark;
+  height:78px;
+
+}
+.top-bar-section li a:not(.button):hover {
+  background-color: $green;
+}
+
+
+// Footer
+// ======
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+
+  &:after {
+    content: "";
+    display: block;
+    /* .push must be the same height as footer */
+    height: 142px;
+  }
+}
+
+@font-face {
+  font-family:'neris';
+  src:font-url('Neris-SemiBold.otf');
+  src:font-url('Neris-SemiBold.otf?#iefix') format('embedded-opentype');
+}
+
+.footer {
+  background-color: $gray_dark;
+  @extend .content-padding;
+  height:150px;
+}
+

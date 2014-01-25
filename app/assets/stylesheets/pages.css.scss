@@ -1,5 +1,27 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.scss.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'base';
 
+// Home Page
+// =========
+#capabilities {
+  background-color: $green;
+  @extend .content-padding;
+  height:390px;
 
+  h3 { color: #fff; }
+
+  p { color:#fff; }
+}
+
+// Projects Index Page
+// ===================
+.project {
+  .panel {
+    min-height: 375px;
+  }
+}
+
+// Contact Page
+// ============
+.form {
+  padding-top: 80px;
+}
