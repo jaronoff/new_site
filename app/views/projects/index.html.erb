@@ -2,13 +2,6 @@
 
 <h1><%= yield(:page_title) %></h1>
 
-<dl class="sub-nav">
-  <dt>Filter:</dt>
-  <dd class="active"><a href="#">All</a></dd>
-  <dd><a href="#">UI/UX</a></dd>
-  <dd><a href="#">Web Design</a></dd>
-  <dd><a href="#">Graphic Design</a></dd>
-</dl>
 
 <% @projects.in_groups_of(4, false).each_with_index do |project_group, project_group_index| %>
   <div class="row">
