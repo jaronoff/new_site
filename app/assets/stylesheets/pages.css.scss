@@ -6,10 +6,15 @@
   background-color: $green;
   @extend .content-padding;
   height:390px;
+  padding:15px;
 
   h3 { color: #fff; }
 
   p { color:#fff; }
+   @media screen and (min-width: $break-small) {
+   	height: 800px;
+   }
+
 }
 
 // Contact Page

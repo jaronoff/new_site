@@ -88,6 +88,10 @@ html, body {
 .footer {
   background-color: $gray_dark;
   @extend .content-padding;
-  height:150px;
+  height:300px;
+  padding-top: 30px;
 }
 
+label.desc {
+  color: $green_dark;
+}
