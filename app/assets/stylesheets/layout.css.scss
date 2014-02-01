@@ -88,20 +88,12 @@ html, body {
 .footer {
   background-color: $gray_dark;
   @extend .content-padding;
-  height:300px;
+  height:200px;
   padding-top: 30px;
+  text-align: center;
 }
 
-ul .footer-nav {
-  @media screen and (min-width: $break-small) {
-   text-align: center;
-  }
-}
-ul .footer-social {
-  @media screen and (min-width: $break-small) {
-   text-align: center;
-  }
-}
+
 
 label.desc {
   color: $green_dark;
