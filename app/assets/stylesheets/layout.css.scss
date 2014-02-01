@@ -92,6 +92,17 @@ html, body {
   padding-top: 30px;
 }
 
+ul .footer-nav {
+  @media screen and (min-width: $break-small) {
+   text-align: center;
+  }
+}
+ul .footer-social {
+  @media screen and (min-width: $break-small) {
+   text-align: center;
+  }
+}
+
 label.desc {
   color: $green_dark;
 }

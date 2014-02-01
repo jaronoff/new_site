@@ -5,17 +5,23 @@
 #capabilities {
   background-color: $green;
   @extend .content-padding;
-  height:390px;
+  height:400px;
   padding:15px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $break-small) {
+    height: 700px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $break-large) {
+    height: 400px;
+    margin-bottom: 20px;
+  }
 
   h3 { color: #fff; }
 
   p { color:#fff; }
-   @media screen and (min-width: $break-small) {
-   	height: 800px;
-   }
-
-}
+  }
 
 // Contact Page
 // ============

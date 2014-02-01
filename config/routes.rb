@@ -3,9 +3,11 @@ NewSite::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # High Voltage Redirects. First line, stops duplicate content, second; sets root to home.html.erb in Pages.
-  get '/home', to: redirect('/')
 
+# config/routes.rb
   root :to => 'high_voltage/pages#show', id: 'home'
+
+
 
   # Example of regular route:
   get 'products/:id' => 'catalog#view'
