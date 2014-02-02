@@ -10,15 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-= require jquery
-= foundation.topbar.js
- //= require jquery_ujs
+//= require jquery
+//= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree .
 
-
-
-//= require foundation
-$(document).foundation();
 

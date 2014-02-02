@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 # Models
 gem "compass-rails", "~> 1.1.2"
-gem "zurb-foundation", "~> 4.3.2"
+gem "foundation-rails", "~> 5.0.3.1"
 gem 'high_voltage'
 gem 'font-awesome-rails'
 
@@ -35,9 +35,6 @@ gem 'simple_form'
 
 #Blog Engine
 gem 'bloggy'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Josh Aronoff | <%= yield(:page_title) %></title> 
 
     <%= stylesheet_link_tag    "application" %>
+
     <%= javascript_include_tag "vendor/modernizr" %>
+
     <%= csrf_meta_tags %>
   </head>
 
@@ -15,20 +18,15 @@
     <%= render :partial => 'layouts/nav' %>
  
     <div class="row content page-wrap">
-    <%= yield %>
-
+      <%= yield %>
     </div>
+
     <footer class="footer">
-    <%= render :partial => 'layouts/footer' %>
-      </footer>
+      <%= render :partial => 'layouts/footer' %>
+    </footer>
+
     <%= javascript_include_tag "application" %>
-  <script src="js/foundation/foundation.js"></script>
-  <script src="js/foundation/foundation.topbar.js"></script>
-  <!-- Other JS plugins can be included here -->
-
-  <script>
-    $(document).foundation();
-  </script>
-
+    <!-- Other JS plugins can be included here -->
+    <script>$(document).foundation();</script>
   </body>
 </html>

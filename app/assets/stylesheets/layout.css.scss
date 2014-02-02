@@ -48,13 +48,34 @@ nav.top-bar {
 .top-bar, .title-area, .contain-to-grid, .top-bar-section li.hover>a:not(.button) {
   border-bottom: $green_dark;
   background-color: $green_dark;
-  height:78px;
-
-}
-.top-bar-section li a:not(.button):hover {
-  background-color: $green;
 }
 
+// This ensures the menu button displays all of the nav items when in mobile screen
+.top-bar.expanded {
+  overflow: visible !important;
+  z-index: 9999999999999999;
+
+  ul.right {
+    li {
+      //padding-bottom: 10px;
+
+      a {
+        line-height: 78px;
+        padding: 0px 0px 0px 15px;
+        //padding-left: 15px;
+      }
+    }
+  }
+}
+
+.top-bar-section li a:not(.button) {
+  border-bottom: $green_dark;
+  background-color: $green_dark;
+
+  &:hover {
+    background-color: $green;
+  }
+}
 
 // Footer
 // ======
