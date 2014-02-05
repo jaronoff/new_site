@@ -20,9 +20,9 @@
         <div class="panel">
           <a href="<%= 'projects/' + to_kebab_case(project.name) %>"><h4><%= project.name %></h4></a>
           <% project.project_fields.each do |project_field| %>
-            <div><%= project_field.field.name %></div>
+            <h6 class="tag"><%= project_field.field.name%></h6>
           <% end %>
-          <br>
+        
 
           <p class="project_description"><%= truncate(project.description, length: 200) %></p>
         </div>

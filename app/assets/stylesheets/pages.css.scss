@@ -20,7 +20,17 @@
 
   h3 { color: #fff; }
 
+  h3 .i-am-josh {
+    @media screen and (max-width: $break-small) {
+      text-align:center;
+    }
+  }
+
   p { color:#fff; }
+  }
+
+  .name a {
+    color:$white;
   }
 
 // Contact Page
@@ -36,4 +46,20 @@
     min-height: 375px;
   }
 }
+
+.circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(josh_head.png) no-repeat;
+   background-position:50% 50%;
+   margin: 0 auto;
+  }
+
+.circular img {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  }
 

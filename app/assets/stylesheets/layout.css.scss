@@ -26,7 +26,7 @@ nav.top-bar {
   .title-area {
     font-family: neris;
     font-size: 20px;
-    color:#fff;
+    
 
     .name {
       color:$white;
@@ -42,11 +42,13 @@ nav.top-bar {
     a { padding-top: 20px; }
   }
 }
+li .name a {
+  color:$white;
+}
 
 // Top Bar
 // =======
 .top-bar, .title-area, .contain-to-grid, .top-bar-section li.hover>a:not(.button) {
-  border-bottom: $green_dark;
   background-color: $green_dark;
 }
 
@@ -70,12 +72,15 @@ nav.top-bar {
 
 .top-bar-section li a:not(.button) {
   border-bottom: $green_dark;
-  background-color: $green_dark;
+    background-color: $green_dark;
 
   &:hover {
     background-color: $green;
   }
 }
+
+
+
 
 // Footer
 // ======
