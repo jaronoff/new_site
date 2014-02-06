@@ -1,10 +1,10 @@
 #App Settings
-set :application, 'Josh_New_Site'
+set :application, 'ac_site'
 set :repository, 'git@github.com:jaronoff/new_site.git'
 set :branch, "master"
 
 set :scm, :git
-set :deploy_to, '/home/jaronoff/webapps/portfolio_site/'
+set :deploy_to, '/home/jaronoff/webapps/ac_site/'
 set :keep_releases, 5
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
