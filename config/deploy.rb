@@ -24,6 +24,8 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_via, :remote_cache
 
 
+after "deploy", "deploy:migrate"
+
 namespace :deploy do
   desc "Restart nginx"
   task :restart do
