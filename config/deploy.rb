@@ -12,8 +12,10 @@ set :keep_releases, 5
 
 #Gems and Path settings
 
-default_environment['PATH'] = "/home/jaronoff/webapps/ac_site/bin:$PATH"
-default_environment['GEM_HOME'] = "/home/jaronoff/webapps/ac_site/gems"
+set :default_environment, { 
+'PATH' = "/home/jaronoff/webapps/ac_site/bin:$PATH"
+'GEM_HOME' = "/home/jaronoff/webapps/ac_site/gems"
+}
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
