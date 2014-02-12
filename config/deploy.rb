@@ -1,3 +1,9 @@
+#Gems and Path settings
+
+default_environment['PATH'] = "/home/jaronoff/webapps/ac_site/bin:$PATH"
+default_environment['GEM_HOME'] = "/home/jaronoff/webapps/ac_site/gems"
+
+
 #App Settings
 set :application, 'ac_site'
 set :repository, 'git@github.com:jaronoff/new_site.git'
@@ -13,6 +19,8 @@ set :keep_releases, 5
 role :web, "web432.webfaction.com"									 # Your HTTP server, Apache/etc
 role :app, "web432.webfaction.com"                   # This may be the same as your `Web` server
 role :db,  "web432.webfaction.com", :primary => true # This is where Rails migrations will run
+
+
 
 
 #User Settings
