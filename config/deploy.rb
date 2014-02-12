@@ -11,10 +11,12 @@ set :deploy_to, '/home/jaronoff/webapps/ac_site/'
 set :keep_releases, 5
 
 #Gems and Path settings
+set :default_environment, {
 
-set :default_environment, { 
-'PATH' = "/home/jaronoff/webapps/ac_site/bin:$PATH"
-'GEM_HOME' = "/home/jaronoff/webapps/ac_site/gems"
+  ‘PATH’ => ‘/home/jaronoff/webapps/ac_site/bin:$PATH’,
+
+  ‘GEM_HOME’ => ‘/home/jaronoff/webapps/ac_site/gems’,
+
 }
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
