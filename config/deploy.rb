@@ -1,9 +1,11 @@
 #Gems and Path settings
 set :default_environment, {
 	'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems/",
-  'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH",
+  'PATH' => "/home/jaronoff/webapps/ac_site/bin/",
     
 }
+
+#old bin path -- bin:$PATH
 
 #App Settings
 set :application, 'ac_site'
