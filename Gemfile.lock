@@ -108,6 +108,7 @@ GEM
     net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    pg (0.17.1)
     polyglot (0.3.3)
     posix-spawn (0.3.8)
     pygments.rb (0.3.7)
@@ -187,6 +188,7 @@ DEPENDENCIES
   high_voltage
   jbuilder (~> 1.2)
   jquery-rails
+  pg (~> 0.17.1)
   rails (= 4.0.2)
   rest-client (~> 1.6.7)
   sass-rails (~> 4.0.0)

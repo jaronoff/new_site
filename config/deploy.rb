@@ -40,6 +40,17 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_via, :remote_cache
 
 
+#adding bundle install to your deploy.rb via http://gavinmorrice.com/blog/posts/6-adding-bundle-install-to-your-capistrano-deploy-file
+namespace :bundle do
+
+  desc "run bundle install and ensure all gem requirements are met"
+  task :install do
+    run "cd #{current_path} && bundle install  --without=test --no-update-sources"
+  end
+
+end
+before "deploy:restart", "bundle:install"
+
 
 namespace :deploy do
   desc "Restart nginx"
