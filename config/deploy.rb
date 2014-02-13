@@ -1,7 +1,7 @@
 set :default_environment, {
-    'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH",
-    'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems/",
-
+	'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems/",
+  'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH",
+    
 }
 
 
@@ -38,6 +38,7 @@ default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 set :deploy_via, :remote_cache
 set :locals_rails_env, "production"
+set :migrate_env,    "production"
 
 #adding bundle install to your deploy.rb via http://gavinmorrice.com/blog/posts/6-adding-bundle-install-to-your-capistrano-deploy-file
 namespace :bundle do
