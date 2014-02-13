@@ -4,7 +4,6 @@ set :default_environment, {
 
 }
 
-set :rails_env, "production"
 
 
 
@@ -49,7 +48,7 @@ namespace :bundle do
   end
 
 end
-before "deploy:restart", "bundle:install"
+before "deploy:restart", "deploy:migrate"
 
 
 namespace :deploy do
@@ -59,7 +58,6 @@ namespace :deploy do
   end
 end
 
-after "deploy", "deploy:migrate"
 
 
 
