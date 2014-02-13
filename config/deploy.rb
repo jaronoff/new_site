@@ -26,12 +26,11 @@ set :deploy_via, :remote_cache
 
 #db settings for migrations via capistrano documentation at: http://capitate.rubyforge.org/recipes/deploy.html#deploy:migrate
 set :rake,           "rake" 
-set :rails_env,      "production" 
 set :migrate_target, :latest
 
 #Gems and Path settings
 set :default_environment, {
-	'GEM_HOME' => "#{deploy_to}/gems",
+	'GEM_HOME' => "#{deploy_to}/gems/",
   'PATH' => "#{deploy_to}/bin:$PATH",
 }
 
