@@ -1,9 +1,3 @@
-#Gems and Path settings
-set :default_environment, {
-	'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems/",
-  'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH",
- 
-}
 
 #App Settings
 set :application, 'ac_site'
@@ -15,18 +9,12 @@ set :deploy_to, '/home/jaronoff/webapps/ac_site/'
 set :keep_releases, 5
 
 
-
-
-
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, "web432.webfaction.com"									 # Your HTTP server, Apache/etc
 role :app, "web432.webfaction.com"                   # This may be the same as your `Web` server
 role :db,  "web432.webfaction.com", :primary => true # This is where Rails migrations will run
-
-
-
 
 #User Settings
 set :user, "jaronoff"
@@ -40,6 +28,12 @@ set :deploy_via, :remote_cache
 set :rake,           "rake" 
 set :rails_env,      "production" 
 set :migrate_target, :latest
+
+#Gems and Path settings
+set :default_environment, {
+	'GEM_HOME' => "#{deploy_to}/gems",
+  'PATH' => "#{deploy_to}/bin:$PATH",
+}
 
 #adding bundle install to your deploy.rb via http://gavinmorrice.com/blog/posts/6-adding-bundle-install-to-your-capistrano-deploy-file
 namespace :bundle do
