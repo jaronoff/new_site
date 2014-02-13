@@ -1,7 +1,7 @@
 set :default_environment, {
-  ‘PATH’ => ‘/home/jaronoff/webapps/ac_site/bin:$PATH’,
+    'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH"
+    'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems"
 
-  ‘GEM_HOME’ => ‘/home/jaronoff/webapps/ac_site/gems’,
 }
 
 
