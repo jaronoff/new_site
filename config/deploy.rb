@@ -50,7 +50,7 @@ before "deploy:restart", "deploy:migrate"
 namespace :deploy do
   desc "Restart nginx"
   task :restart do
-    run "#{deploy_to}/bin/restart"
+    run "#{deploy_to}bin/restart"
   end
 end
 
