@@ -39,7 +39,6 @@ set :deploy_via, :remote_cache
 #db settings for migrations via capistrano documentation at: http://capitate.rubyforge.org/recipes/deploy.html#deploy:migrate
 set :rake,           "rake" 
 set :rails_env,      "production" 
-set :migrate_env,    "production" 
 set :migrate_target, :latest
 
 #adding bundle install to your deploy.rb via http://gavinmorrice.com/blog/posts/6-adding-bundle-install-to-your-capistrano-deploy-file
