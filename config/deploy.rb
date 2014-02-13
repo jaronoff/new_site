@@ -37,7 +37,7 @@ set :use_sudo, false
 default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 set :deploy_via, :remote_cache
-set :locals_rails_env, "production"
+set :rails_env, "deploy"
 set :migrate_env,    "production"
 
 #adding bundle install to your deploy.rb via http://gavinmorrice.com/blog/posts/6-adding-bundle-install-to-your-capistrano-deploy-file
