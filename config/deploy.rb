@@ -1,8 +1,11 @@
 set :default_environment, {
     'PATH' => "/home/jaronoff/webapps/ac_site/bin:$PATH",
-    'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems",
+    'GEM_HOME' => "/home/jaronoff/webapps/ac_site/gems/",
 
 }
+
+set :rails_env, "production"
+
 
 
 #App Settings
@@ -13,6 +16,7 @@ set :branch, "master"
 set :scm, :git
 set :deploy_to, '/home/jaronoff/webapps/ac_site/'
 set :keep_releases, 5
+
 
 #Gems and Path settings
 
