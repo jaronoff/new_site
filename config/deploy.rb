@@ -43,7 +43,7 @@ namespace :bundle do
   end
 
 end
-before "deploy:restart", "deploy:migrate"
+before "deploy:restart", "deploy:migrations"
 
 
 namespace :deploy do
