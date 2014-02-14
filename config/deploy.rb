@@ -7,6 +7,8 @@ set :branch, "master"
 set :scm, :git
 set :deploy_to, '/home/jaronoff/webapps/ac_site/'
 set :keep_releases, 5
+set :stage, :production
+
 
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
