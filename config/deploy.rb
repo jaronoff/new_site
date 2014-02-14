@@ -43,7 +43,7 @@ namespace :bundle do
   end
 
 end
-before "deploy:restart", "deploy:migrate"
+
 
 
 namespace :deploy do
@@ -53,7 +53,7 @@ namespace :deploy do
   end
 end
 
-
+after "deploy:restart", "deploy:migrate"
 
 
 # if you want to clean up old releases on each deploy uncomment this:
