@@ -2,7 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b56b918-a8b6-4dcf-b168-f02e40924466" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/FontAwesome-1f7d957cbd1c1c5ffe16dc317465d8cd.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/FontAwesome-4480bd249ec7f614dbf29eadd48af4a0.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Black-1a6d4309dd08da00a05c338386562ecc.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Black-b990b50e788374a44f55b35b644a6bee.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-BlackItalic-05d63a554b59d7c883b44c8e42b89e46.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-BlackItalic-490a0b06d7fc8b6180d42e79a81bdcb4.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-BoldItalic-0a06badbd6bcb8d10aa83bf2e5b060e8.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-BoldItalic-dadbebbdce8d3ba613827e50a8791db8.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Light-804732a28de367b7ded6c5977edd9948.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Light-83ff66bf90024a4a49112690557ddaa3.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-LightItalic-54743e2566c38c60b8184aaf1893bb05.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-LightItalic-6e0c51483eba1bc71fd69eebcc2c9d72.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-SemiBold-1b2f88b991805425fb7f3eeb4a06f982.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-SemiBold-29c6e44a87c49db74bce34225c430f10.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-SemiBoldItalic-176cd4553ade3fba78b968af2722af9b.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-SemiBoldItalic-7dc7d72de89966b0b2caee25a78762fe.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Thin-44427e5e38038e7078cb346ba2efdaee.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-Thin-f6f8072cd8a623a27a013ba99d8594a7.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-ThinItalic-1cd94f31bc3c23e4d075d80ba1df4a3d.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/Neris-ThinItalic-a11ab8eb536c879213b477c044f64652.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0f9b8ee8298e34fa032f3fac1a3ef646.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0f9b8ee8298e34fa032f3fac1a3ef646.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-352f7087c924194b5b3c3a196039f5f4.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-352f7087c924194b5b3c3a196039f5f4.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-843de79aaf88a72c9afaa6c3e8f24da9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-843de79aaf88a72c9afaa6c3e8f24da9.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-9aced6320bfeae9efcfd04c86940aa6c.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-9aced6320bfeae9efcfd04c86940aa6c.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-d6e0a03646a89353d58dc00f497a24fb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-d6e0a03646a89353d58dc00f497a24fb.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-f4ede2d1ce46f64cce4df9ae4c6a6007.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-f4ede2d1ce46f64cce4df9ae4c6a6007.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dimension-400aaef0fd5e6c7d20970d2359d54493.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dimension-ab413d170d0a519134f78b41f2eed5d5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dimension_@2X-63d67ca305a7b4cd4119c5f21d74c0e0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dimension_@2X-f79b5c57d5736e01eb792720530c48fc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-0a8ef264981ae93cc2524d0585ca8318.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-1b4427cb023ff18203bb9e8bb1e21a9b.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-327f4f56ae2c1f6963aee5ac2d1f810a.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-44c2b689e2d48ead7b77d8cfa33b3504.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-46d92da2b5f999bb039c1af16b62c15a.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-4d6d992435b87d7eebfc287bbb7b02b0.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-5f3ff21ec2321ce7c1215146d3e7d38d.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/fontawesome-webfont-d57a577567b5154f2a8c3b92c27e3549.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/graphy_2x-46c7002ed50c9f448aacd0da9a23ca5e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/graphy_2x-c4a4f8da88c8b77b7e04cf69140a1cd6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/inflicted-21149f5f32aac7b7840c29f7057f07c3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/inflicted-705fa6c269088ab023c0de262da3eda0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/josh_head-563102fd97fb1733cde9a94f5201c9ea.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/josh_head-e5923dd055b2a12447459e5f509c6828.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/low_contrast_linen-2eeec57f7aa0114561d018e0805677f1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/low_contrast_linen-a3c4274842d41e6bcd71a37babc9d589.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest-570c429428d6530102570d0e6af3aa96.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/retina_wood-f439666b377791154a6abe925ff7f7c7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/retina_wood-fa2add8a2376610abe3b2e0232345a34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/retina_wood_@2X-35082ab261b4d42eec91e6e51f8fe300.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/retina_wood_@2X-9ecef2d91595f5aaa20ff6d8a8a7daab.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tag-77b6ad4bd9fcbd7d7fdf2cf3a1fbf4b9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tag-94a2c47161bd4a518d4c38fba77773cc.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tag-b06edc35f797f21c090c9aa31fd8a7ce.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/tag-e61630f262ce5feb1c535fbb639418fd.psd" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/general.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/general.css.scss" />
     </list>
     <ignored path="new_site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.15075377">
+            <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="general.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="32" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="202" selection-end="225" vertical-scroll-proportion="0.47738692">
               <folding />
             </state>
           </provider>
@@ -129,8 +191,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/layout.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css.scss" />
       </list>
     </option>
   </component>
@@ -183,6 +245,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="new_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="new_site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -761,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/layout.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pages.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -787,16 +856,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css.scss">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0">
+        <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/layout.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.15075377">
+        <state line="22" column="27" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="202" selection-end="225" vertical-scroll-proportion="0.47738692">
           <folding />
         </state>
       </provider>
