@@ -24,8 +24,7 @@ nav.top-bar {
   }
 
   .title-area {
-    font-family: neris;
-    font-size: 20px;
+     font-size: 20px;
     
 
     .name {
@@ -105,11 +104,6 @@ html, body {
   }
 }
 
-@font-face {
-  font-family:'neris';
-  src:font-url('Neris-SemiBold.otf');
-  src:font-url('Neris-SemiBold.otf?#iefix') format('embedded-opentype');
-}
 
 .footer {
   background-color: $gray_dark;
