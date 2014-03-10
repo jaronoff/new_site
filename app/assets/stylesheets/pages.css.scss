@@ -6,6 +6,7 @@
   background-color: $green;
   @extend .content-padding;
   height:400px;
+  padding:15px;
   margin-bottom: 20px;
 
   @media screen and (min-width: $break-small) {
