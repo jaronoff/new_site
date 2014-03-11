@@ -36,7 +36,7 @@ nav.top-bar {
   li {
     @extend .nav-height;
 
-    &:hover { color:$blue; }
+    &:hover { color:$yellow; }
 
     a { padding-top: 20px; }
   }
@@ -106,10 +106,15 @@ html, body {
 
 
 .footer {
-  background-color: $gray_dark;
+  background-color: $blue_dark;
   @extend .content-padding;
   height:200px;
   padding-top: 30px;
+  color:$yellow;
+
+  p, a:hover {
+    color: $yellow;
+  }
 }
 
 
