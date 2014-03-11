@@ -3,16 +3,16 @@
 // Navbar
 // =====
 .nav-height {
-  height:78px;
+  height:67px;
 }
 
 nav.top-bar {
   @extend .nav-height;
-  background-color:$green_dark;
+  background-color:$blue_dark;
 
   ul {
     @extend .nav-height;
-    background-color:$green_dark
+    background-color:$blue_dark
   }
 
   ul.right {
@@ -36,7 +36,7 @@ nav.top-bar {
   li {
     @extend .nav-height;
 
-    &:hover { color:$green; }
+    &:hover { color:$blue; }
 
     a { padding-top: 20px; }
   }
@@ -48,7 +48,7 @@ li .name a {
 // Top Bar
 // =======
 .top-bar, .title-area, .contain-to-grid, .top-bar-section li.hover>a:not(.button) {
-  background-color: $green_dark;
+  background-color: $blue_dark;
 }
 
 // This ensures the menu button displays all of the nav items when in mobile screen
@@ -70,12 +70,12 @@ li .name a {
 }
 
 .top-bar-section li a:not(.button) {
-  border-bottom: $green_dark;
-    background-color: $green_dark;
+  border-bottom: $blue_dark;
+    background-color: $blue_dark;
 
   &:hover {
-    background-color: $green;
-  }
+    background-color: $yellow;
+    }
 }
 
 
@@ -115,5 +115,5 @@ html, body {
 
 
 label.desc {
-  color: $green_dark;
+  color: $blue_dark;
 }

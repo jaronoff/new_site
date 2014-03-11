@@ -4,9 +4,10 @@
 // Tags
 // ====
 button, .button {
-  background-color:$green_dark;
+  background-color:$blue_dark;
   &:hover {
-    background-color: lighten( $green_dark, 10% );
+    background-color: lighten( $yellow, 10% );
+    font-color:$blue_dark;
     z-index:999;
     transform: scale(1.1);
   }
@@ -27,7 +28,7 @@ a {
 }
 
 h1, h2, h3,h4,h5 {
-  color: $green_dark;
+  color: $blue_dark;
 }
 
 img {
