@@ -6,6 +6,8 @@ class Behance
   @@url = "http://www.behance.net/v2/users/#{@@behance_id}/projects?api_key=#{@@behance_api_key}"
 
   def self.get_projects
+    Project.delete_all
+
     results = RestClient.get(@@url)
 
     results = JSON.parse results

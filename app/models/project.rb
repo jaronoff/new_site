@@ -20,17 +20,17 @@ class Project < ActiveRecord::Base
   # Model Associations
   # ==================
 
-  has_many :project_ownerships
+  has_many :project_ownerships, dependent :destroy
 
-  has_many :project_owners, through: :project_ownerships
+  has_many :project_owners, through: :project_ownerships, dependent :destroy
 
-  has_many :project_fields
+  has_many :project_fields, dependent :destroy
 
-  has_many :project_modules
+  has_many :project_modules, dependent :destroy
 
-  has_one :project_stat
+  has_one :project_stat, dependent :destroy
 
-  has_one :project_cover
+  has_one :project_cover, dependent :destroy
 
 
   # Model Validations
