@@ -7,6 +7,14 @@ class Behance
 
   def self.get_projects
     Project.delete_all
+    ProjectCover.delete_all
+    ProjectField.delete_all
+    ProjectModule.delete_all
+    ProjectOwner.delete_all
+    ProjectOwnerField.delete_all
+    ProjectOwnerImage.delete_all
+    ProjectOwnership.delete_all
+    ProjectStat.delete_all
 
     results = RestClient.get(@@url)
 
