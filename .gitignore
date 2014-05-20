@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 /config/database.yml
-.DS_Store
+/.DS_Store
 /log/*
 /tmp/*
 

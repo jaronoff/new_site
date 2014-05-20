@@ -3,8 +3,7 @@
 // Home Page
 // =========
 #capabilities {
-  background-color: $green;
-  @extend .content-padding;
+  background-color: $blue;
   height:400px;
   padding:15px;
   margin-bottom: 20px;
@@ -18,6 +17,7 @@
     margin-bottom: 20px;
   }
 
+
   h3 { color: #fff; }
 
   h3 .i-am-josh {
@@ -25,13 +25,18 @@
       text-align:center;
     }
   }
-
+  h4 {
+    color:$yellow;
+    margin-bottom: 0;
+  }
   p { color:#fff; }
   }
 
   .name a {
     color:$white;
   }
+
+
 
 // Contact Page
 // ============
