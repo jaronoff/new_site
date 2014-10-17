@@ -32,6 +32,7 @@ gem "compass-rails", "~> 1.1.2"
 gem "foundation-rails", "~> 5.0.3.1"
 gem 'high_voltage'
 gem 'font-awesome-rails'
+gem 'slim', '~> 2.0.2'
 
 # Contact Page
 gem 'simple_form'
