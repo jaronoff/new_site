@@ -15,7 +15,7 @@
       <% end %>
 
       <div class="large-3 small-12 columns project">
-        <% if project.project_cover and project.project_cover.url %>     
+        <% if project.project_cover and project.project_cover.url &%>     
           <a href="<%= 'projects/' + to_kebab_case(project.name) %>"><img height="500" width="500" src="<%= project.project_cover.url %>"></a>      
         <% end %>        
         <div class="panel">
