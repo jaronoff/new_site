@@ -1,12 +1,6 @@
 <%= content_for :page_title, @project.name %>
 
 <h3><%= yield(:page_title) %></h3>
-<p>
-  <b>Fields: </b>
-  <span><%= convert_fields_to_str(@project) %></span>
-</p>
-
-
 <div class="row">
   <div class="small-12 large-8 columns">
     <% @project.project_modules.each do |project_module| %>
@@ -25,10 +19,10 @@
 
 
   <div class="small-12 large-4 columns">
-    <blockquote><b>About Project:</b>
+    <blockquote><b>About <%= @project.name %></b>
       <p><%= @project.description %></p>
 
-      <b>Project Tags:</b><br>
+      <b>Areas of Expertise</b><br>
 
       <% @project.project_fields.each do |project_field| %>
         <span class="label"><%= project_field.field.name %></span>
