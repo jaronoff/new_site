@@ -1,5 +1,13 @@
 <%= content_for :page_title, 'Onboarding Questionairre' %>
 
+<<<<<<< HEAD
+  <div class="large-6 small-12 columns">
+    <h1>
+  <%= yield(:page_title) %></h1>
+	<h3>Use the form to tell me more about your project.</h3>
+
+	</div>
+=======
     <h1>
   <%= yield(:page_title) %></h1>
 	<h3>Use the form to tell me more about your project.</h3>
@@ -25,4 +33,4 @@ var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') retu
 try { rd7u92g1ac96zu = new WufooForm();rd7u92g1ac96zu.initialize(options);rd7u92g1ac96zu.display(); } catch (e) {}};
 var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
 })(document, 'script');</script>
-
+>>>>>>> 039b7dfb33811129e5bf099ce28c6da6c98c96c2
