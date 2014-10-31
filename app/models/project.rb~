@@ -40,8 +40,10 @@ class Project < ActiveRecord::Base
   before_save :create_url_name
 
   def create_url_name
-    puts "$#$%" * 200
+<<<<<<< HEAD
+=======
     puts self.name
+>>>>>>> a2de083c25bf8d6d5de035cf94ea0463b2cfe69c
     if self.name.present?
       self.url_name = self.name.split(' ').map { |word| word.downcase.gsub(/\W/, '') }.join('-')
     end

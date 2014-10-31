@@ -53,8 +53,6 @@ class Project < ActiveRecord::Base
         .includes([:project_owners => :project_owner_fields, :project_owners => :project_owner_images])
         .includes([:project_fields => :field])
   end
-
-
 end
 
 
