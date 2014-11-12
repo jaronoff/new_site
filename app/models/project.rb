@@ -5,12 +5,14 @@
 #  id           :integer          not null, primary key
 #  behance_id   :integer
 #  name         :string(255)
+#  description  :text
 #  published_on :integer
 #  created_on   :integer
 #  modified_on  :integer
 #  url          :string(255)
 #  privacy      :string(255)
 #  for_sale     :float
+#  url_name     :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
 #
@@ -26,11 +28,13 @@ class Project < ActiveRecord::Base
 
   has_many :project_fields, dependent: :destroy
 
-  has_many :project_modules, dependent: :destroy
+  has_many :project_modules
 
   has_one :project_stat, dependent: :destroy
 
   has_one :project_cover, dependent: :destroy
+
+  accepts_nested_attributes_for :project_modules
 
 
   # Model Validations

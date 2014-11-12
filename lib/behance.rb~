@@ -179,7 +179,9 @@ class Behance
         ProjectModule.where(project_id: project.id).delete_all        
         
         project.delete
+      
       end
+    
     end
 
     return true

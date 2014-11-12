@@ -1,0 +1,17 @@
+
+<%= form_for(@project, method: :patch, url: admins_path) do |f| %>
+
+  <button> Update
+  <% f.submit "Update" %>
+  </button>
+  
+      <%= f.hidden_field :id %>
+  <%= f.fields_for :project_modules do |project_module| %>
+
+    <%= project_module.text_area :content, rows: 10 %>
+
+
+  <% end %>
+  
+
+<% end %>

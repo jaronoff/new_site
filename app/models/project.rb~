@@ -26,7 +26,7 @@ class Project < ActiveRecord::Base
 
   has_many :project_fields, dependent: :destroy
 
-  has_many :project_modules, dependent: :destroy
+  has_many :project_modules
 
   has_one :project_stat, dependent: :destroy
 
@@ -40,10 +40,6 @@ class Project < ActiveRecord::Base
   before_save :create_url_name
 
   def create_url_name
-<<<<<<< HEAD
-=======
-    puts self.name
->>>>>>> a2de083c25bf8d6d5de035cf94ea0463b2cfe69c
     if self.name.present?
       self.url_name = self.name.split(' ').map { |word| word.downcase.gsub(/\W/, '') }.join('-')
     end
@@ -57,8 +53,6 @@ class Project < ActiveRecord::Base
         .includes([:project_owners => :project_owner_fields, :project_owners => :project_owner_images])
         .includes([:project_fields => :field])
   end
-
-
 end
 
 

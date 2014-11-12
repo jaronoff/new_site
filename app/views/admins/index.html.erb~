@@ -1,0 +1,9 @@
+<ul>
+  <% @projects.each do |project| %>
+    <li>
+
+      <%= link_to project.name, "admins/edit/#{project.id}" %>  
+      
+    </li>
+  <% end %>
+</ul>
