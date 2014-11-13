@@ -69,7 +69,6 @@ class Behance
           
           
           project_details["project"]["modules"].each do |project_module|
-            puts "module looped through"
             if project_module["type"] == "image"
               pm.content += "<img src='#{project_module['src']}'></img>"
             elsif project_module["type"] == "text"          
@@ -180,17 +179,15 @@ class Behance
 
     behance_ids = old_projects.values
 
-    Project.all.select(:behance_id, :id).each do |project|
-      puts " PROJECT BEHANCE ID #{project.behance_id}"    
-    
-    
+    Project.all.select(:behance_id, :id).each do |project|    
       unless behance_ids.include?(project.behance_id)
         project_module = ProjectModule.find_by(project_id: project.id)
         
-        #project_module.delete        
+        # Uncomment line below
+        project_module.delete        
         
-        puts " DELETED " * 200
-        #project.delete
+        # Uncomment line below
+        project.delete
       end
     end
 
