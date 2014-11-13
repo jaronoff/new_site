@@ -69,7 +69,7 @@ class Behance
           
           
           project_details["project"]["modules"].each do |project_module|
-            put "module looped through"
+            puts "module looped through"
             if project_module["type"] == "image"
               pm.content += "<img src='#{project_module['src']}'></img>"
             elsif project_module["type"] == "text"          

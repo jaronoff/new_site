@@ -187,10 +187,10 @@ class Behance
       unless behance_ids.include?(project.behance_id)
         project_module = ProjectModule.find_by(project_id: project.id)
         
-        #project_module.delete        
+        project_module.delete        
         
         puts " DELETED " * 200
-        #project.delete
+        project.delete
       end
     end
 
