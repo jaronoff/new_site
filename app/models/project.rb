@@ -28,13 +28,13 @@ class Project < ActiveRecord::Base
 
   has_many :project_fields, dependent: :destroy
 
-  has_many :project_modules
+  has_one :project_module
 
   has_one :project_stat, dependent: :destroy
 
   has_one :project_cover, dependent: :destroy
 
-  accepts_nested_attributes_for :project_modules
+  accepts_nested_attributes_for :project_module
 
 
   # Model Validations
@@ -53,7 +53,7 @@ class Project < ActiveRecord::Base
   # =============
   def self.with_includes
     # This will include all the associated models we need to improve performance of database scouring
-    self.includes([:project_cover, :project_owners, :project_fields, :project_stat])
+    self.includes([:project_cover, :project_owners, :project_fields, :project_stat, :project_module])
         .includes([:project_owners => :project_owner_fields, :project_owners => :project_owner_images])
         .includes([:project_fields => :field])
   end

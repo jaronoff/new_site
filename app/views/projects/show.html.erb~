@@ -3,7 +3,7 @@
 <h3><%= yield(:page_title) %></h3>
 <div class="row">
   <div class="small-12 large-8 columns">
-    <p><%= @project.project_module.content.html_safe %></p>
+    <p><%= @project.project_module.content %></p>
   </div>
 
   <div class="small-12 large-4 columns">

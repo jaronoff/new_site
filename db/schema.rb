@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20140123233157) do
 
   create_table "project_modules", force: true do |t|
     t.integer  "project_id"
-    t.string   "content_type"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"

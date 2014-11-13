@@ -5,12 +5,10 @@
   <% f.submit "Update" %>
   </button>
   
-      <%= f.hidden_field :id %>
-  <%= f.fields_for :project_modules do |project_module| %>
-
+  <%= f.hidden_field :id %>
+  
+  <%= f.fields_for :project_module do |project_module| %>
     <%= project_module.text_area :content, rows: 10 %>
-
-
   <% end %>
   
 

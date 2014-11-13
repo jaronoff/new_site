@@ -11,7 +11,7 @@ class AdminsController < ApplicationController
   
     project = Project.find(params['project']['id'])
     
-    if project and project.update_attributes(params['project'])
+    if project and project.update_attributes(project_params)
       puts " update " * 100
     end
     

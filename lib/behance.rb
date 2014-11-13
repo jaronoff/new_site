@@ -55,19 +55,25 @@ class Behance
           # Since we recreatedthe projects we have to update the project modules with their respective project ids
           old_project_id = old_projects.find{|k, v| old_projects[k] == project['id'] }.first
 
-          ProjectModule.where(project_id: old_project_id).each do |project_module|
+          project_module = ProjectModule.find_by(project_id: old_project_id)
+          
+          if project_module          
             project_module.project_id = created_project.id
             
             project_module.save
           end                    
         else
-          project_details["project"]["modules"].each do |project_module|
-            pm = ProjectModule.create(project_id: created_project.id, content_type: project_module["type"])
+          pm = ProjectModule.create(project_id: created_project.id)
 
+          pm.content = pm.content || ""
+          
+          
+          project_details["project"]["modules"].each do |project_module|
+            puts "module looped through"
             if project_module["type"] == "image"
-              pm.content = project_module["src"]
+              pm.content += "<img src='#{project_module['src']}'></img>"
             elsif project_module["type"] == "text"          
-              pm.content = project_module["text_plain"]
+              pm.content += project_module["text_plain"]
             end
 
             pm.save
@@ -175,10 +181,16 @@ class Behance
     behance_ids = old_projects.values
 
     Project.all.select(:behance_id, :id).each do |project|
+      puts " PROJECT BEHANCE ID #{project.behance_id}"    
+    
+    
       unless behance_ids.include?(project.behance_id)
-        ProjectModule.where(project_id: project.id).delete_all        
+        project_module = ProjectModule.find_by(project_id: project.id)
         
-        project.delete
+        #project_module.delete        
+        
+        puts " DELETED " * 200
+        #project.delete
       end
     end
 
