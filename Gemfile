@@ -39,9 +39,6 @@ gem 'slim', '~> 2.0.2'
 # Contact Page
 gem 'simple_form'
 
-#Blog Engine
-gem 'bloggy'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
