@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
-ruby '2.1.1'
+gem 'rails', '4.0.2' 
+ruby '2.2.1'
 
 
 gem 'annotate', '~> 2.6.5'
@@ -39,6 +39,10 @@ gem 'slim', '~> 2.0.2'
 # Contact Page
 gem 'simple_form'
 
+#markdown processor
+gem 'redcarpet', '~> 3.0.0'
+
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -71,9 +75,9 @@ group :development do
 end
 
 # Using PG gem for Production DB
-group :production, :staging do
- 	gem "pg", "~> 0.17.1"
-end
+# group :production, :staging do
+ 	# gem "pg", "~> 0.17.1"
+# end
 
 # Use Sqlite3 as the database for Active Record
 group :development, :test do
