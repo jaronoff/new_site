@@ -75,9 +75,9 @@ group :development do
 end
 
 # Using PG gem for Production DB
-group :production, :staging do
- 	gem "pg", "~> 0.17.1"
-end
+# group :production, :staging do
+ 	# gem "pg", "~> 0.17.1"
+# end
 
 # Use Sqlite3 as the database for Active Record
 group :development, :test do
