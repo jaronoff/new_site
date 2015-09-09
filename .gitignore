@@ -24,6 +24,7 @@
 
 # Ignore ruby mine stuff
 /.idea
+/blog
 
 # Ignore old gemfile
 /gemfile~
